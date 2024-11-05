@@ -1,42 +1,114 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+:root{
+    --p-c:#5541f0;
+    --black:#000000;
+    --p-s:#acacac;
+    --white:white;
+    --font-sm:0.8rem;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.p-c{
+    color: var(--p-c);
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.p-c-b{
+    background-color: var(--p-c);
+}
+.p-s{
+    color: var(--p-s);
+}
+.p-s-b{
+    background-color: var(--p-s);
+}
+.black{
+    color: var(--black);
+}
+.black-b{
+    background-color: var(--black);
+}
+.white{
+    color: var(--white);
+}
+.white-b{
+    background-color: var(--white);
+}
+.font-sm{
+    font-size: var(--font-sm);
+}
+.main{
+    height: 100vh;
+    position: relative;
+    background-color: rgb(8, 8, 8);
+    width: 100%;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+::-webkit-scrollbar {
+    width: 0px; 
   }
-  to {
-    transform: rotate(360deg);
+  ::-webkit-scrollbar-track {
+    background: var(--white); 
+    /* border-radius: 10px; */
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  ::-webkit-scrollbar-thumb {
+    background: #a8a7a8; /
+    /* border-radius: 3px; */
   }
+/* Footebar section start */
+.footbar{
+    z-index: 1000;
+    bottom: 0;
+    width: 100%;
+    position:absolute ;
+border-top: 0.1px solid rgba(255, 255, 255, 0.306);
 }
+.footbar .icons{
+font-size: 1.5rem;
+}
+.footbar .icons-container span{
+font-size: var(--font-sm);
+font-weight: 500;
+}
+/* Footebar section End */
 
-.card {
-  padding: 2em;
+/* Alarm section start */
+.alarm-container{
+    display: flex;
+    justify-content: space-between;
 }
+/* .head{
+} */
 
-.read-the-docs {
-  color: #888;
+.alarm-card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height:70vh;
+    overflow-y: scroll;
+    /* border-top: 0.1px solid white; */
 }
+.add-alarm-btn{
+position: fixed;
+z-index: 10;
+bottom: 9%;
+left: 48%;
+}
+.alarm-card{
+    transition: all 0.2s ease-in-out;
+    z-index: 3;
+}
+.alarm-card:hover{
+transform: scale(0.98);
+}
+.rounded-circle {
+    width: 50px; 
+    height: 50px;
+    padding: 0; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+/* Alarm section End */
