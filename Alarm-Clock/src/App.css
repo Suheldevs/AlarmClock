@@ -85,7 +85,7 @@ font-weight: 500;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    height:70vh;
+    height:60vh;
     overflow-y: scroll;
     /* border-top: 0.1px solid white; */
 }
@@ -111,4 +111,23 @@ transform: scale(0.98);
     justify-content: center;
   }
   
+.active-link{
+    color: red;
+    background-color: red;
+  }
 /* Alarm section End */
+
+/* WordlClock start */
+
+.time-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20vh;
+    min-height: 40vh;
+  }
+.city-container{
+    height:60vh;
+    overflow-y: scroll;
+}
+/* WordlClock end */

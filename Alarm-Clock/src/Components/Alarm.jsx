@@ -49,7 +49,11 @@ function Alarm() {
             <hr/>
             <Row>
               <div className="alarm-card-container mt-0">
-                {alarms.map((alarm) => (
+                {alarms.length === 0 ? (
+                  <div className="text-center mt-5">
+                    <h4>No alarms set !</h4>
+                  </div>
+                ):(alarms.map((alarm) => (
                   <Card key={alarm.id} className="alarm-card text-bg-dark p-0">
                     <Card.Body>
                       <div className='d-flex justify-content-between'>
@@ -59,14 +63,14 @@ function Alarm() {
                       <Card.Text className='font-sm'>Ring once</Card.Text>
                     </Card.Body>
                   </Card>
-                ))}
+                )))}
               </div>
             </Row>
 
             <Container>
               <Row>
                 <Col lg={12}>
-                  <Modal show={showModal} onHide={closeModal}  centered>
+                  <Modal show={showModal} onHide={closeModal}   centered>
                     <Modal.Header closeButton>
                       <Modal.Title className="text-center w-100">New Alarm</Modal.Title>
                     </Modal.Header>
@@ -139,7 +143,7 @@ function Alarm() {
             </Container>
 
             <div className='add-alarm-btn'>
-            <Button onClick={openModal} variant="primary" className="mb-3 fs-4 rounded-circle">
+            <Button onClick={openModal} title='add Alarm' variant="primary" className="mb-3 fs-4 rounded-circle">
   <FaPlus className='text-center mb-2' />
 </Button>
             </div>
